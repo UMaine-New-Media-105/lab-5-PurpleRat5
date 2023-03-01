@@ -1,5 +1,6 @@
 function setup() {
   createCanvas(400, 400);
+  //Variables for bear, set random pos. and speeds to 2
   bearX = random(0, width)
   bearY = random(0, height)
   XSpeed = 2
@@ -8,9 +9,13 @@ function setup() {
 
 function draw() {
   background(220);
+  //Move bear by speed each frame
   bearX += XSpeed
   bearY += YSpeed
+  //Draw bear with position
   drawBear(bearX, bearY, 0.25);
+  //Bounds
+  //The extra numbers are offsets so it looks nicer
   if(bearX>(width-30) || bearX < -20){
     XSpeed *= -1
   }
@@ -18,7 +23,7 @@ function draw() {
     YSpeed *= -1
   }
 }
-
+//Draw bear Function
 function drawBear(x, y, Scale){
   push();
   translate(x, y)
