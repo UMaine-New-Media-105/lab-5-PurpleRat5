@@ -15,16 +15,16 @@ function draw() {
   drawBear(bearX, bearY, 0.25);
   //Key Movement
   if(keyIsPressed){
-    if (keyCode==UP_ARROW){
+    if (keyCode==UP_ARROW || keyCode==87){  //Support for 'WASD' and Arrows
       bearY -= YSpeed
     }
-    if (keyCode==DOWN_ARROW){
+    if (keyCode==DOWN_ARROW || keyCode==83){
       bearY += YSpeed
     }
-    if (keyCode==LEFT_ARROW){
+    if (keyCode==LEFT_ARROW || keyCode==65){
       bearX -= XSpeed
     }
-    if (keyCode==RIGHT_ARROW){
+    if (keyCode==RIGHT_ARROW || keyCode==68){
       bearX += XSpeed
     }
   }
